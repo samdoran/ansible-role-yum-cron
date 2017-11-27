@@ -1,0 +1,32 @@
+# {{ ansible_managed }}
+[commands]
+update_cmd = {{ yumcron_update_cmd.daily | default(yumcron_update_cmd) }}
+update_messages = {{ yumcron_update_messages.daily | default(yumcron_update_messages) }}
+download_updates = {{ yumcron_download_updates.daily | default(yumcron_download_updates) }}
+apply_updates = {{ yumcron_apply_updates.daily | default(yumcron_apply_updates) }}
+random_sleep = {{ yumcron_random_sleep.daily | default(yumcron_random_sleep) }}
+
+[emitters]
+system_name = {{ yumcron_system_name.daily | default(yumcron_system_name) }}
+emit_via = {{ yumcron_emit_via.daily | default(yumcron_emit_via) }}
+output_width = {{ yumcron_output_width.daily | default(yumcron_output_width) }}
+
+[email]
+email_from = {{ yumcron_email_from }}
+email_to = {% for item in yumcron_email_to %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}
+email_host = {{ yumcron_email_host }}
+
+[groups]
+group_list = {{ yumcron_group_list }}
+group_package_types = {% for item in yumcron_group_package_types %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}
+
+
+[base]
+debuglevel = {{ yumcron_debuglevel }}
+{% if yumcron_skip_broken is defined %}
+skip_broken = {{ yumcron_skip_broken }}
+{% endif %}
+mdpolicy = {{ yumcron_mdpolicy }}
+{% if yumcron_assumeyes is defined %}
+assumeyes = {{ yumcron_assumeyes }}
+{% endif %}

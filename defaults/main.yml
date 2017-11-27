@@ -1,0 +1,42 @@
+# RHEL 7 Options
+yumcron_update_cmd: default
+yumcron_update_messages:
+  daily: 'yes'
+  hourly: 'no'
+yumcron_download_updates:
+  daily: 'yes'
+  hourly: 'no'
+yumcron_apply_updates: 'no'
+yumcron_random_sleep:
+  daily: 360
+  hourly: 15
+yumcron_system_name: None
+yumcron_emit_via: stdio
+yumcron_output_width: 80
+yumcron_email_from: root@localhost
+yumcron_email_to:
+  - root
+yumcron_email_host: localhost
+yumcron_group_list: None
+yumcron_group_package_types:
+  - mandatory
+  - default
+yumcron_debuglevel: -2
+# yumcron_skip_broken: 'True'
+yumcron_mdpolicy: group:main
+# yumcron_assumeyes: 'True'
+
+# RHEL 6 Options
+yumcron_yum_parameter: ''
+yumcron_check_only: 'no'
+yumcron_check_first: 'no'
+yumcron_download_only: 'no'
+yumcron_error_level: 0
+yumcron_debug_level: 0
+yumcron_randomwait: 60
+yumcron_mailto: ''
+yumcron_systemname: ''
+yumcron_days_of_week: '0123456'
+yumcron_cleanday: 0
+yumcron_service_waits: yes
+yumcron_service_wait_time: 300
