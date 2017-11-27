@@ -14,6 +14,7 @@ output_width = {{ yumcron_output_width.daily | default(yumcron_output_width) }}
 [email]
 email_from = {{ yumcron_email_from }}
 email_to = {% for item in yumcron_email_to %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}
+
 email_host = {{ yumcron_email_host }}
 
 [groups]
