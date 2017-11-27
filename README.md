@@ -1,7 +1,7 @@
 yum-cron
 =========
 [![Galaxy](https://img.shields.io/badge/galaxy-samdoran.yum--cron-blue.svg?style=flat)](https://galaxy.ansible.com/samdoran/yum-cron)
-[![Build Status](https://travis-ci.org/samdoran/ansible-role-yum--cron.svg?branch=master)](https://travis-ci.org/samdoran/ansible-role-yum-cron)
+[![Build Status](https://travis-ci.org/samdoran/ansible-role-yum-cron.svg?branch=master)](https://travis-ci.org/samdoran/ansible-role-yum-cron)
 
 Install and configure `yum-cron` to automatically install updates or RHEL.
 

@@ -38,5 +38,5 @@ yumcron_mailto: ''
 yumcron_systemname: ''
 yumcron_days_of_week: '0123456'
 yumcron_cleanday: 0
-yumcron_service_waits: yes
+yumcron_service_waits: 'yes'
 yumcron_service_wait_time: 300
