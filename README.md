@@ -25,13 +25,13 @@ Also note that boolean values, such as `yes` and `no`, must be quoted to ensure 
 | Name              | Default Value       | Description          |
 |-------------------|---------------------|----------------------|
 | `yumcron_update_cmd` | `default` | What kind of update to run. `*` |
-| `yumcron_update_messages` | `{daily: 'yes', hourly: 'no'}` | Whether message shoulde be emitted when updates are available. `*` |
+| `yumcron_update_messages` | `{daily: 'yes', hourly: 'no'}` | Whether message should be emitted when updates are available. `*` |
 | `yumcron_download_updates` | `{daily: 'yes', hourly: 'no'}` | Whether updates should be downloaded if available. `*` |
-| `yumcron_apply_updates` | `no` | Whether to install updates if available. `*` |
-| `yumcron_random_sleep` | `{daily: 360, hourly: 15}` | Max time to randomly sleep in minutes. `*` |
+| `yumcron_apply_updates` | `no` | Whether to install updates if available. |
+| `yumcron_random_sleep` | `{daily: 360, hourly: 15}` | Max time to randomly sleep in minutes. |
 | `yumcron_system_name` | `None` | Name to use for the system when messages are emitted. `*` |
-| `yumcron_emit_via` | `stdio` | How to send messages. Valid options are `stdio` and `email`. `*` |
-| `yumcron_output_width` | `80` | Width in characters of emitted messages. `*` |
+| `yumcron_emit_via` | `stdio` | How to send messages. Valid options are `stdio` and `email`. |
+| `yumcron_output_width` | `80` | Width in characters of emitted messages. |
 | `yumcron_email_from` | `root@localhost` | Email to send messages from. |
 | `yumcron_email_to` | `['root']` | List of email addresses to send messages to. |
 | `yumcron_email_host` | `localhost` | Name of host to connect to to send email messages. |
