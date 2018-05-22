@@ -1,12 +1,15 @@
 # RHEL 7 Options
 yumcron_update_cmd: default
 yumcron_update_messages:
-  daily: 'yes'
   hourly: 'no'
+  daily: 'yes'
 yumcron_download_updates:
-  daily: 'yes'
   hourly: 'no'
+  daily: 'yes'
 yumcron_apply_updates: 'no'
+# yumcron_apply_updates:
+#   hourly: 'no'
+#   daily: 'yes'
 yumcron_random_sleep:
   daily: 360
   hourly: 15

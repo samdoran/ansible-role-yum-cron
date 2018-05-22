@@ -17,7 +17,7 @@ The configuration options for RHEL 6 and RHEL 7 are different. On RHEL 7, there 
 
 Note that not all options are independently configurable. Options that take independent `daily` and `hourly` commands are indicated by by a `*`.
 
-Also note that boolean values, such as `yes` and `no`, must be quoted to ensure they are actually key as literal strings since the underlying config files are expecting `yes` and `no`, not `True` and `False`.
+Also note that boolean values, such as `yes` and `no`, must be quoted to ensure they are literal strings since the underlying config files are expecting `yes` and `no`, not `True` and `False`.
 
 ### RHEL 7 Variables ###
 
