@@ -20,4 +20,10 @@
     - yumcron
     - yumcron_config
 
-
+- name: Start and enable yum-cron
+  service:
+    name: yum-cron
+    state: started
+    enabled: yes
+  tags:
+    - yumcron
