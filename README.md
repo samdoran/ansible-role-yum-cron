@@ -17,7 +17,7 @@ The configuration options for RHEL 6 and RHEL 7 are different. On RHEL 7, there 
 
 Note that not all options are independently configurable. Options that take independent `daily` and `hourly` commands are indicated by by a `*`.
 
-Also note that boolean values, such as `yes` and `no`, must be quoted to ensure they are literal strings since the underlying config files are expecting `yes` and `no`, not `True` and `False`.
+Also note that boolean values, such as `true` and `false`, must be quoted to ensure they are literal strings since the underlying config files are expecting `true` and `false`, not `True` and `False`.
 
 ### RHEL 7 Variables ###
 
@@ -27,7 +27,7 @@ Also note that boolean values, such as `yes` and `no`, must be quoted to ensure 
 | `yumcron_update_cmd` | `default` | What kind of update to run. `*` |
 | `yumcron_update_messages` | `{daily: 'yes', hourly: 'no'}` | Whether message should be emitted when updates are available. `*` |
 | `yumcron_download_updates` | `{daily: 'yes', hourly: 'no'}` | Whether updates should be downloaded if available. `*` |
-| `yumcron_apply_updates` | `no` | Whether to install updates if available. |
+| `yumcron_apply_updates` | `false` | Whether to install updates if available. |
 | `yumcron_random_sleep` | `{daily: 360, hourly: 15}` | Max time to randomly sleep in minutes. |
 | `yumcron_system_name` | `None` | Name to use for the system when messages are emitted. `*` |
 | `yumcron_emit_via` | `stdio` | How to send messages. Valid options are `stdio` and `email`. |

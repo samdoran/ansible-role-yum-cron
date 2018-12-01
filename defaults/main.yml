@@ -13,14 +13,14 @@ yumcron_apply_updates: 'no'
 yumcron_random_sleep:
   daily: 360
   hourly: 15
-yumcron_system_name: None
+yumcron_system_name: 'None'
 yumcron_emit_via: stdio
 yumcron_output_width: 80
 yumcron_email_from: root@localhost
 yumcron_email_to:
   - root
 yumcron_email_host: localhost
-yumcron_group_list: None
+yumcron_group_list: 'None'
 yumcron_group_package_types:
   - mandatory
   - default
