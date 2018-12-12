@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: yum-cron
   author: Sam Doran
   description: Configure automatic yum updates
   company: Ansible by Red Hat
