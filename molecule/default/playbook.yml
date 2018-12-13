@@ -8,4 +8,4 @@
           on {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}
 
     - import_role:
-        name: repo_epel
+        name: yum_cron

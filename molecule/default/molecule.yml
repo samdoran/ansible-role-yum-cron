@@ -21,6 +21,8 @@ provisioner:
     options:
       exclude:
         - molecule/default/playbook.yml
+      x:
+        - ANSIBLE0010
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-playbook.yml}
 scenario:
