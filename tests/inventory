@@ -1,2 +1,0 @@
-yum-cron-centos6 ansible_host=10.77.19.112
-yum-cron-centos7 ansible_host=10.77.19.113
