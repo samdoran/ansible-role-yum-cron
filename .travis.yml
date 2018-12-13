@@ -3,7 +3,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: caddy
+    - ROLE_NAME: yum_cron
   matrix:
     - MOLECULE_DISTRIBUTION: centos6
     - MOLECULE_DISTRIBUTION: centos7
