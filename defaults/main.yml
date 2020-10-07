@@ -1,4 +1,4 @@
-# RHEL 7 Options
+# RHEL 7/8 Options
 yumcron_update_cmd: default
 yumcron_update_messages:
   hourly: 'no'
@@ -28,6 +28,8 @@ yumcron_debuglevel: -2
 # yumcron_skip_broken: 'True'
 yumcron_mdpolicy: group:main
 # yumcron_assumeyes: 'True'
+yumcron_command_format: cat
+yumcron_stdin_format: '{body}'
 
 # RHEL 6 Options
 yumcron_yum_parameter: ''

@@ -1,0 +1,8 @@
+yumcron_package_name: dnf-automatic
+yumcron_service_name: dnf-automatic.timer
+yumcron_config_files:
+  - src: dnf-automatic.conf.j2
+    dest: /etc/dnf/automatic.conf
+
+  # - src: yum-cron.conf.j2
+  #   dest: /etc/yum/yum-cron.conf

@@ -6,16 +6,18 @@ download_updates = {{ yumcron_download_updates.daily | default(yumcron_download_
 apply_updates = {{ yumcron_apply_updates.daily | default(yumcron_apply_updates) }}
 random_sleep = {{ yumcron_random_sleep.daily | default(yumcron_random_sleep) }}
 
+
 [emitters]
 system_name = {{ yumcron_system_name.daily | default(yumcron_system_name) }}
 emit_via = {{ yumcron_emit_via.daily | default(yumcron_emit_via) }}
 output_width = {{ yumcron_output_width.daily | default(yumcron_output_width) }}
 
+
 [email]
 email_from = {{ yumcron_email_from }}
 email_to = {% for item in yumcron_email_to %}{{ item }}{% if not loop.last %}, {% endif %}{% endfor %}
-
 email_host = {{ yumcron_email_host }}
+
 
 [groups]
 group_list = {{ yumcron_group_list }}

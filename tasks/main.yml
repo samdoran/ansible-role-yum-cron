@@ -1,12 +1,21 @@
 - name: Include distribution specific variables
-  include_vars: "{{ ansible_facts.os_family }}-{{ ansible_facts.distribution_major_version }}.yml"
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_facts.distribution }}-{{ ansible_facts.distribution_version }}.yml"
+        - "{{ ansible_facts.os_family }}-{{ ansible_facts.distribution_major_version }}.yml"
+        - "{{ ansible_facts.distribution }}.yml"
+        - "{{ ansible_facts.os_family }}.yml"
+      paths:
+        - vars
   tags:
     - yumcron
     - always
 
-- name: Install yum-cron
+- name: Install {{ yumcron_package_name }}
   yum:
-    name: yum-cron
+    name: "{{ yumcron_package_name }}"
     state: latest
   tags:
     - yumcron
@@ -15,15 +24,17 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-  with_items: "{{ yumcron_config_files }}"
+    owner: root
+    mode: '0644'
+  loop: "{{ yumcron_config_files }}"
   tags:
     - yumcron
     - yumcron_config
 
 - name: Start and enable yum-cron
   service:
-    name: yum-cron
+    name: "{{ yumcron_service_name }}"
     state: started
-    enabled: true
+    enabled: yes
   tags:
     - yumcron

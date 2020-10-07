@@ -8,16 +8,7 @@ env:
   matrix:
     - MOLECULE_DISTRIBUTION: centos6
     - MOLECULE_DISTRIBUTION: centos7
-    # - MOLECULE_DISTRIBUTION: rhel6
-    # - MOLECULE_DISTRIBUTION: rhel7
-    # - MOLECULE_DISTRIBUTION: ubuntu14
-    # - MOLECULE_DISTRIBUTION: ubuntu16
-    # - MOLECULE_DISTRIBUTION: ubuntu18
-    # - MOLECULE_DISTRIBUTION: debian8
-    # - MOLECULE_DISTRIBUTION: debian9
-    # - MOLECULE_DISTRIBUTION: fedora27
-    # - MOLECULE_DISTRIBUTION: fedora28
-    # - MOLECULE_DISTRIBUTION: fedora29
+    - MOLECULE_DISTRIBUTION: centos8
 
 install:
   - pip install molecule[lint]==3.0.6 docker

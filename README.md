@@ -3,7 +3,7 @@ yum-cron
 [![Galaxy](https://img.shields.io/badge/galaxy-samdoran.yum--cron-blue.svg?style=flat)](https://galaxy.ansible.com/samdoran/yum-cron)
 [![Build Status](https://travis-ci.org/samdoran/ansible-role-yum-cron.svg?branch=master)](https://travis-ci.org/samdoran/ansible-role-yum-cron)
 
-Install and configure `yum-cron` to automatically install updates or RHEL.
+Install and configure `yum-cron` or `dnf-automatic` to automatically install updates on RHEL.
 
 Requirements
 ------------
@@ -13,13 +13,15 @@ None
 Role Variables
 --------------
 
-The configuration options for RHEL 6 and RHEL 7 are different. On RHEL 7, there are `daily` and `hourly` configuration files. You may use one option for both, or define `daily` and `hourly` keys within the variable and it will be used in the appropriate template. See `defaults/main.yml` for examples.
+The configuration options for RHEL 6 and RHEL 7 are different. The options for RHEL 7 and 8 are mostly the same.
+
+On RHEL 7, there are `daily` and `hourly` configuration files. You may use one option for both, or define `daily` and `hourly` keys within the variable and it will be used in the appropriate template. See `defaults/main.yml` for examples.
 
 Note that not all options are independently configurable. Options that take independent `daily` and `hourly` commands are indicated by by a `*`.
 
 Also note that boolean values, such as `true` and `false`, must be quoted to ensure they are literal strings since the underlying config files are expecting `true` and `false`, not `True` and `False`.
 
-### RHEL 7 Variables ###
+### RHEL 7/8 Variables ###
 
 
 | Name              | Default Value       | Description          |
@@ -41,6 +43,8 @@ Also note that boolean values, such as `true` and `false`, must be quoted to ens
 | `yumcron_skip_broken` | `[undefined]` | |
 | `yumcron_mdpolicy` | `group:main` | |
 | `yumcron_assumeyes` | `[undefined]` | Auto-import new gpg keys (dangerous). |
+| `yumcron_command_format` | `cat` |  |
+| `yumcron_stdin_format` | `{body}` |  |
 
 ### RHEL 6 Variables ###
 
@@ -83,4 +87,4 @@ Example Playbook
 License
 -------
 
-MIT
+Apache 2.0

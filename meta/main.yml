@@ -1,18 +1,22 @@
 galaxy_info:
-  role_name: yum-cron
+  role_name: yum_cron
   author: Sam Doran
-  description: Configure automatic yum updates
-  company: Ansible by Red Hat
-  license: MIT
-  min_ansible_version: 2.5
+  description: Configure automatic yum/dnf updates
+  company: ~
+  license: Apache 2.0
+  min_ansible_version: 2.9
 
   platforms:
     - name: EL
       versions:
         - 6
         - 7
+        - 8
 
   galaxy_tags:
     - system
+    - yum
+    - dnf
+    - updates
 
 dependencies: []

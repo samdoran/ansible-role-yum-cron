@@ -1,3 +1,5 @@
+yumcron_package_name: yum-cron
+yumcron_service_name: yum-cron
 yumcron_config_files:
   - src: yum-cron-hourly.conf.j2
     dest: /etc/yum/yum-cron-hourly.conf
