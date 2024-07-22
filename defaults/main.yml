@@ -24,7 +24,7 @@ yumcron_group_list: 'None'
 yumcron_group_package_types:
   - mandatory
   - default
-yumcron_debuglevel: -2
+yumcron_debuglevel: 0
 # yumcron_skip_broken: 'True'
 yumcron_mdpolicy: group:main
 # yumcron_assumeyes: 'True'

@@ -38,7 +38,7 @@ Also note that boolean values, such as `true` and `false`, must be quoted to ens
 | `yumcron_email_host` | `localhost` | Name of host to connect to to send email messages. |
 | `yumcron_group_list` | `None` | List of groups to update. |
 | `yumcron_group_package_types` | `['mandatory, 'default']` | Types of group packages to install. |
-| `yumcron_debuglevel` | `-2` | Use this to filter yum core messages. |
+| `yumcron_debuglevel` | `0` | Use this to filter yum core messages. |
 | `yumcron_skip_broken` | `[undefined]` | |
 | `yumcron_mdpolicy` | `group:main` | |
 | `yumcron_assumeyes` | `[undefined]` | Auto-import new gpg keys (dangerous). |
